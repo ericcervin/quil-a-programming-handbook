@@ -1,4 +1,4 @@
-(ns quil-a-programming-handbook.ex_09_07
+(ns quil-a-programming-handbook.ex_13_07
   (:require [quil.core :as q]
             [quil.middleware :as m]))
 
