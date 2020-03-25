@@ -22,10 +22,7 @@
                      newx (+ x (* (q/cos a) 16.0 num))
                      newy (+ y (* (q/sin a) 6.0 num))]
                  (draw-circle newx newy (/ radius 2) num)))))))
-                        
-      
-      ;;  (do (draw-circle (- x (/ radius 2)) (/ radius 2)  (dec num))
-      ;;    (draw-circle (+ x (/ radius 2)) (/ radius 2)  (dec num))))))
+                
       
 
 (defn draw [state]
