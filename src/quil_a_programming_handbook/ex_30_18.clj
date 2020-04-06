@@ -28,8 +28,7 @@
                  ;;:current-line current-line})))
 
 (defn setup []
-  (let [num-lines 500]
-    {:lines []}))
+  {:lines []})
 
 (defn draw-state [state]
   (q/background 204)
