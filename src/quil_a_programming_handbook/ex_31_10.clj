@@ -11,7 +11,7 @@
       
 
 (defn update-limitedparticle [grv prt]
-    (let [{:keys [x y vx vy radius originX originY] } prt
+    (let [{:keys [x y vx vy radius] } prt
           friction 0.99
           vx (* vx friction)
           vy (+ (* vy friction) grv)
@@ -47,7 +47,7 @@
   (q/rect 0 0 (q/width) (q/height))
   (q/fill 255)
   (doseq [p (:particles state)]
-    (display-genparticle p)))
+    (display-limitedparticle p)))
     
 
 (q/defsketch practice
