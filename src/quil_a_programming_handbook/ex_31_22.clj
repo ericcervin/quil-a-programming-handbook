@@ -29,7 +29,7 @@
         point-list (for [x (range 1 (q/width)) y (range 1 (q/height))]
                         (let [curr-xy (get grd {:x x :y y} 0)
                               nb (neighbors grd x y)]
-                          (case (and (= curr-xy 1) (or (< nb 2) (> nb 3))) [x y 0];isolation death or overpopulation death
+                          (cond (and (= curr-xy 1) (or (< nb 2) (> nb 3))) [x y 0];isolation death or overpopulation death
                                 (and (= curr-xy 0) (= nb 3)) [x y 1];birth
                             :else                        [x y nb])))
         new-map (reduce #(set-map-xy %1 (%2 0) (%2 1) (%2 2)) {} point-list)]
